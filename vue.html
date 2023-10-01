@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.js - Button Reverse</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <button @click="reverseText">{{ buttonText }}</button>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        buttonText: 'Перевернуть'
+      },
+      methods: {
+        reverseText() {
+          this.buttonText = this.buttonText.split('').reverse().join('');
+        }
+      }
+    });
+  </script>
+</body>
+</html>
