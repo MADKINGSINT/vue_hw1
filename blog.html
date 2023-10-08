@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Dancing+Script&family=Raleway:wght@100;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__item header__item1">
+            <img src="./img/Logo.svg" alt="">
+            <h1>Interno</h1>
+        </div>
+        <div class="header__item header__item2">
+            <a href="#">Home</a>
+            <a href="#">Project</a>
+            <a href="#">Blog</a></div>
+    </header>
+    <section class="heading">
+        <div class="heading__title center">
+            <h1 class="heading__title_title">Articles & News</h1>
+            <p class="heading__title_text">Home / Blog</p>
+        </div>
+    </section>
+    <section class="post">
+        <h1 class="post_heading">Latest Post</h1>
+        <div class="post__item">
+            <img class="post__item_img" src="./img/post_img.png" alt="">
+            <div class="post__post">
+
+                <h2 class="post__item_title">Low Cost Latest Invented Interior Designing Ideas</h2>
+                <p class="post__item_text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belief.
+    
+                    Lorem Ipsum is not simply random text. It has roots in a piece of classica.</p>
+                    <div class="post__date">
+                        <p class="post__date_date">26 December,2022 </p>
+                        <button class="post__date_btn"><a href="#"><img src="./img/strelka.svg" alt=""></a></button>
+                    </div>
+            </div>
+
+        </div>
+    </section>
+    <article class="articles">
+        <h1 class="articles__heading">Articles & News</h1>
+        <div id="app">
+<!--             <img v-for="item in items" :key="item.id" :src='item.src' alt="">
+            <h1 v-for="item in items" :key="item.id">{{item.title}}</h1> -->
+            <div class="articles__item" v-for="item in items" :key="item.id">
+                <img class="articles__item_img" :src="item.src" alt="">
+                <h1 class="articles__item_title">{{item.title}}</h1>
+                <span class="articles__item_date"><p class="articles__item_text">{{item.date}}</p>
+                    <button class="articles__item_btn"><img src="./img/strelka.svg" alt=""></button></span>
+            </div>
+        </div>
+        
+    </article>
+    <footer class="footer">
+        <div class="footer__item footer__item1">
+            <div class="footer__item_logo">
+                <img src="./img/Logo.svg" alt="">
+                <h1>Interno</h1>
+                
+            </div>
+            <p class="footer__item_text">
+                It is a long established fact that a reader will be distracted lookings.
+            </p>
+            <div class="footer__item_social">
+                <img src="./img/twitter.svg" alt=""><a href="#"></a></img>
+                <img src="./img/in.svg" alt=""><a href="#"></a></img>
+            </div>
+        </div>
+        <div class="footer__item2">
+            <a class="footer__itme2_link" href="">Pages</a>
+            <a class="footer__itme2_link" href="">Home</a>
+            <a class="footer__itme2_link" href="">Project</a>
+            <a class="footer__itme2_link" href="">Blog</a>
+        </div>
+        <div class="footer__item footer__item3">
+            <h4 class="footer__item3_title">Contact</h4>
+            <p class="footer__item3_text">55 East Birchwood Ave. <br> Brooklyn, New York 11201 <br>contact@interno.com (123) 456 - 7890</p>
+        </div>
+    </footer>
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                
+                return {
+                    items: [
+                        {id: 0, src: '/img/article_img.png', title: 'Let’s Get Solution For Building Construction Work', date: '26 December,2022 '},
+                        {id: 1, src: "./img/article_img.png", title: 'Let’s Get Solution For Building Construction Work', date: '26 December,2022 '},
+                        {id: 2, src: './img/article_img.png', title: 'Let’s Get Solution For Building Construction Work', date: '26 December,2022 '},
+                        {id: 3, src: './img/article_img.png', title: 'Let’s Get Solution For Building Construction Work', date: '26 December,2022 '},
+                        {id: 4, src: './img/article_img.png', title: 'Let’s Get Solution For Building Construction Work', date: '26 December,2022 '},
+                        {id: 5, src: './img/article_img.png', title: 'Let’s Get Solution For Building Construction Work', date: '26 December,2022 '}
+                ],
+                }
+            },
+        })
+    </script>
+</body>
+</html>
