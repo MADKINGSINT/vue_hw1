@@ -2,15 +2,13 @@
 
 export default {
 
-  data() {
 
-  },
 
 
 }
 </script>
 <template>
-    <App :currentPage="this.currentPage"></App>
+    
     <div>
     <header class="header">
       <div class="header__item header__item1">

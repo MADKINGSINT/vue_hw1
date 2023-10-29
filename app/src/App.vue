@@ -8,13 +8,16 @@
     <headBlock></headBlock>
     <blogDetails></blogDetails>
     <footerBlock></footerBlock>
+    <Projects></Projects>
+    <Project_details></Project_details>
     
 
     
 </template>
 
 <script>
-
+import Project_details from "./components/Project_details.vue";
+import Projects from "./components/Projects.vue";
 import blog from "./components/Blog.vue";
 import App from "./components/Home.vue";
 import blogDetails from './components/Blog_details.vue';
@@ -30,26 +33,17 @@ export default {
     blogDetails,
     headBlock,
     footerBlock,
+    Projects,
+    Project_details,
 
 
 
   },
-  data() {
-    return {
-      page: 0,
-
-    }
-  },
-  methods: {
-    getPage(page) {
-      this.page = page;
-    }
 
 
-  },
-  props: {
-    page: Number,
-  }
+
+
+
 };
 </script>
 <style lang="scss">
