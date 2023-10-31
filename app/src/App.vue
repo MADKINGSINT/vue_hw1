@@ -1,5 +1,5 @@
  <template >
-    <headBlock></headBlock>
+<!--     <headBlock></headBlock>
     <App></App>
     <footerBlock></footerBlock>
     <headBlock></headBlock>
@@ -7,38 +7,26 @@
     <footerBlock></footerBlock>
     <headBlock></headBlock>
     <blogDetails></blogDetails>
-    <footerBlock></footerBlock>
-    <Projects></Projects>
-    <Project_details></Project_details>
+    <footerBlock></footerBlock> -->
+      <Header></Header>
+    <router-view></router-view>
+<!--     <Project_details></Project_details> -->
     
 
     
 </template>
 
 <script>
-import Project_details from "./components/Project_details.vue";
-import Projects from "./components/Projects.vue";
-import blog from "./components/Blog.vue";
-import App from "./components/Home.vue";
-import blogDetails from './components/Blog_details.vue';
-import headBlock from '@/components/Header.vue'
-import footerBlock from './components/Footer.vue';
 
+
+import Header from "./components/Header.vue";
 export default {
 
+    components: {
+        Header,
+    }
+  
 
-  components: {
-    blog,
-    App,
-    blogDetails,
-    headBlock,
-    footerBlock,
-    Projects,
-    Project_details,
-
-
-
-  },
 
 
 
@@ -49,56 +37,3 @@ export default {
 <style lang="scss">
 
 </style> 
-<!-- 
-<script>
-import HeaderComponent from "./components/Header.vue";
-import blog from "./components/Blog.vue";
-import App from "./components/App.vue";
-import blogDetails from "./components/Blog_details.vue";
-
-export default {
-  components: {
-    blog,
-    App,
-    blogDetails,
-    HeaderComponent,
-  },
-    methods: {
-    обработатьЗначение(значение) {
-       return значение
-      },
-      getValue() {
-        return this.обработатьЗначение
-    }
-  },
-  data() {
-    return {
-       currentPage: this.обработатьЗначение()
-        
-    };
-  },
-
-};
-</script>
-
-// Главный компонент
-
-<template>
-  <div>
-    <header-component
-      @передача-значения="обработатьЗначение"
-    ></header-component>
-    остальной код 
-  </div>
-  <h1>{{ this.currentPage }}</h1>
-  <div v-if="обработатьЗначение === 0">
-    
-  </div>
-  <div v-if="getValue=== 1">
-    <blog></blog>
-  </div>
-  <div v-if="getValue === 2">
-    <blogDetails></blogDetails>
-  </div>
-</template>
- -->

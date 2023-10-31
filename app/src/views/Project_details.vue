@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="top">
+    <div class="high">
       <img src="../assets/img/Photo.jpg" alt="" />
     </div>
     <div class="about">
@@ -16,7 +16,7 @@
 
 <script>
 import { mapState } from "vuex";
-import Slider from './Carusel.vue';
+import Slider from '../components/Carusel.vue';
 export default {
   computed: {
     ...mapState(["title", "text1", "text2"]),

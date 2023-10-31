@@ -1,20 +1,22 @@
 
 <script>
+import Header from '@/components/Header.vue';
+
 
 
 export default {
   name: "App",
   components: {
-    
-  },
+    Header
+},
    
 };
 </script>
 
 <template>
-  
-  <div id="app">
 
+  <div id="app">
+    
     <div class="top_top">
       <section class="top">
         <h1 class="top__title">

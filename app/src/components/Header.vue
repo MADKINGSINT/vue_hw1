@@ -14,11 +14,17 @@ export default {
       <div class="header__item header__item1">
         <img src="../assets/img/Logo.svg" alt="" />
         <h1>Interno</h1>
+        
+        <router-link to='/home'>Home</router-link>
+        <router-link to='/projects'>Projects</router-link>
+        <router-link to='/blog'>Blog</router-link>
+        <router-link to='/blog_details'>Blog details</router-link>
+        <router-link to='/project_details'>Project details</router-link>
+
+
       </div>
       <div class="header__item header__item2">
-        <a href="#" class="header__item">Главная</a>
-        <a href="#" class="header__item">Блог</a>
-        <a href="#" class="header__item">Блог детэйлз</a>
+
       </div>
     </header>
     </div>
